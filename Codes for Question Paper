@@ -1,0 +1,89 @@
+/////*This function generates random integer between two numbers low (inclusive) and high (inclusive) ([low, high])*/
+
+function randomIntInc (low, high) {
+    return Math.floor(Math.random() * (high - low + 1) + low);
+}
+
+
+/////* Function to find max value in column */
+SELECT MAX(article) AS article FROM shop;
+
+
+/////* Function to create views in Mysql */
+CREATE or REPLACE VIEW v AS SELECT (COLUMNS) FROM questions WHERE DIFFICULTY=i ;
+
+
+/////* Function to count number of rows in a table and use in program*/
+
+var mysql = require('mysql');
+var connection = mysql.createConnection({
+  host     : 'localhost',
+  user     : 'root',
+  password : '',
+  database : 'test'
+});
+connection.connect();
+
+var userdata = '24';
+
+var sql = 'SELECT COUNT(*) AS namesCount FROM new_table WHERE age = ?';
+connection.query(sql, [userdata], function(err, rows, fields) {
+  if (err) throw err;
+  console.log('Query result: ', rows);
+});
+
+connection.end();
+
+
+row[0].namescount is the variable to be used further.
+
+
+/////*Funtion to count total time of paper */
+SELECT sum(time) AS timeCount FROM new_table;
+
+
+/////* Function to read row n of table, regardless of any technical id */
+// This is to read line number 56
+SELECT * FROM customer LIMIT 55,1
+
+
+/////*Function to copy rows into another table */
+
+
+INSERT INTO dues_storage
+SELECT field1, field2, ..., fieldN, CURRENT_DATE()
+FROM dues
+WHERE id = 5;
+
+/////*Function to Create PDF from Table */
+OutputStream file = new FileOutputStream(new File("D://timer.pdf"));
+        Document document = new Document();
+        PdfWriter.getInstance(document, file);
+
+        //Inserting Table in PDF
+        PdfPTable table = new PdfPTable(3);
+
+        PdfPCell cell = new PdfPCell(new Paragraph("Java4s.com"));
+
+        cell.setColspan(3);
+        cell.setHorizontalAlignment(Element.ALIGN_CENTER);
+        cell.setPadding(10.0f);
+        cell.setBackgroundColor(new BaseColor(140, 221, 8));
+
+        table.addCell(cell);
+
+        table.addCell("Name");
+        table.addCell("Address");
+        table.addCell("Country");
+        table.addCell("Java4s");
+        table.addCell("NC");
+        table.addCell("United States");
+        table.setSpacingBefore(30.0f);       // Space Before table starts, like margin-top in CSS
+        table.setSpacingAfter(30.0f);        // Space After table starts, like margin-Bottom in CSS                                       
+ 
+        file.close();
+
+        System.out.println("Pdf created successfully..");
+
+
+/////* Find out how to handle loops */
